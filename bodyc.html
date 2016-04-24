@@ -1,0 +1,405 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Vital Conditions</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script
+			  src="https://code.jquery.com/jquery-2.2.3.js"
+			  integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="
+			  crossorigin="anonymous"></script>
+
+	
+
+	<style type="text/css">
+		ul{
+		list-style-type: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+	}
+	li{
+		display: inline;
+	}
+
+	body{margin: 0;
+		width: 100%}
+
+.header{
+        float:left;
+        width: 100%;
+        background: black;
+    }
+    .logo{
+        float:left;
+        width:150px;
+    }
+    .logo_1{
+        width: 80px;
+        padding: 8px;
+    }
+    .navbar{
+        float:right;
+        margin: 12px;
+
+    }
+    .navbar>ul>li>a{
+        padding: 15px;
+        font-family: sans-serif;
+        text-decoration: none;
+        font-weight: bold;
+        color: #1A5DAD;
+        border: solid;
+        border-color: black;
+    }
+    .navbar>ul>li>a:hover{
+        background: black;
+        font-family: sans-serif;
+        text-decoration: none;
+        font-weight: bold;
+        border: solid;
+        border-color: #1A5DAD;
+        color: #1A5DAD;
+    }
+
+	
+	
+	.welcome{
+		background:url(body.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100%;
+		float: left;
+		font-family: sans-serif;
+		text-align: center;
+		height: 400px;
+		width: 100%
+		
+
+	}
+	 table {
+    border-collapse: collapse;
+    width: 100%;
+	}
+
+	th, td {
+    text-align: left;
+    padding: 8px;
+	}
+
+	tr:nth-child(even){background-color: #f2f2f2}
+
+	}
+
+	th {
+    background-color: #4CAF50;
+    color: white;
+	}
+
+	.footer{
+		height:50px;
+		width:100%;
+		float:left;
+		background:#1A5DAD;
+		color: white;
+		font-family: sans-serif;
+		font-size: 10px;
+		text-align: center;
+		border-top: solid;
+		padding-top: 5px;
+		border-color: white;
+	}
+	
+	.nisko{
+	background-image: linear-gradient(to bottom,#1a5dad 0,#1A5DAD 100%);
+	
+	}
+	.normalno{
+	background-image: linear-gradient(to bottom,#1baa58 0,#1BAA58 100%);
+
+	}
+	.visoko{
+	    background-image: linear-gradient(to bottom,#ee293d 0,#EE293D 100%);
+	}
+input[type="submit"] {
+    width: 100%;
+    background-color: #ffce00;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.prikaz{
+		padding: 50px;
+
+		width:100%;
+		float:left;
+		background: black;
+	}
+.progtekst{
+	color: white;
+	font-family: sans-serif;
+	font-size: 1.5em;
+	
+	
+}
+.golemo{
+	color: white;
+	font-family: sans-serif;
+	font-size: 5em;
+	
+	float: right;
+}
+
+
+
+	</style>
+</head>
+
+<body>
+<div id="home" class="header">
+	<div class="logo">
+		<a href="index.html"><img class="logo_1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1237px-NASA_logo.svg.png"></a>
+	</div>
+
+	<div class="navbar"> 
+		<ul>
+			<li><a href="bodyc.html">Body</a></li>
+			<li><a href="environment.html">Environment</a></li>
+			<li><a href="activity.html">Activity</a></li>
+			<li><a href="aid-programs.html">Harmony</a></li>
+			
+		
+		</ul>
+	</div>
+</div>
+	
+<div class="welcome">
+		
+</div>
+
+
+<div class="prikaz">
+ 
+ 
+
+
+<div class="row">
+
+<div class="col-md-7">
+<span class="progtekst">Body temperature</span>
+<div class="progress">
+  
+  <div id="temperature" class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="15" aria-valuemax="30" style="min-width: 2em; width: 0%;">
+ </div>  
+  </div>
+</div>
+<div class="col-md-4">
+<span id="temp" class="golemo">0C</span>
+</div>
+</div>
+
+
+<!--<div class="row">
+
+<div class="col-md-7 ">
+<span class="progtekst">Blood Pressure</span>
+<div class="progress">
+  <div id="pressure" class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 0%;">
+    
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<span id="psi" class="golemo">0%</span>
+</div>
+</div>
+!-->
+
+<div class="row">
+
+<div class="col-md-7 ">
+<span class="progtekst">Respiration Rate</span>
+<div class="progress">
+  <div id="respiration" class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 0%;">
+    
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<span id="res" class="golemo">0%</span>
+</div>
+</div>
+
+<div class="row">
+
+<div class="col-md-7 ">
+<span class="progtekst">Heart Rate</span>
+<div class="progress">
+  <div id="heart" class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 0%;">
+    
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<span id="hea" class="golemo">0%</span>
+</div>
+</div>
+
+
+
+
+
+
+
+</div>
+ 
+<div class="footer">
+	&copy Copyright 2016 NASA. All rights reserved<br>
+	
+</div>
+<script>
+    function getRandomArbitrary(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+ 
+    function settemp(tmp) {
+ 
+        var temperature = getRandomArbitrary(35, 41);
+        temperature = temperature.toPrecision(4);
+ 
+        if (temperature < 36) {
+            document.getElementById('temperature').setAttribute('style', 'min-width: 2em; width: ' + (temperature - 35) * 14.285 + '%');
+            document.getElementById('temp').innerHTML = temperature + " \xB0C";
+            $("#temperature").attr("class",'nisko progress-bar');
+        }
+ 
+        else if (temperature >= 36 && temperature <= 37) {
+            document.getElementById('temperature').setAttribute('style', 'background-color:green min-width: 2em; width: ' + (temperature - 35) * 14.285 + '%');
+            document.getElementById('temp').innerHTML = temperature + " \xB0C";
+            $("#temperature").attr("class",'normalno progress-bar');
+        }
+ 
+        else if (temperature > 37) {
+            document.getElementById('temperature').setAttribute('style', 'min-width: 2em; width: ' + (temperature - 35) * 14.285 + '%');
+            document.getElementById('temp').innerHTML = temperature + " \xB0C";
+            $("#temperature").attr("class",'visoko progress-bar');
+        }
+ 
+    }
+ 
+    setInterval(settemp,2000);
+ 
+    function setatm() {
+        var atm = getRandomArbitrary(0, 2);
+        if (atm >= 1) {
+            atm = atm.toPrecision(3);
+        }
+        else
+            atm = atm.toPrecision(2);
+ 
+        if (atm < 0.8) {
+            document.getElementById('pressure').setAttribute('style', 'min-width: 2em; width: ' + atm * 50 + '%');
+            document.getElementById('psi').innerHTML = atm + " atm";
+            $("#pressure").attr("class",'nisko progress-bar');
+        }
+ 
+        if (atm >= 0.8 && atm <= 1.2) {
+            document.getElementById('pressure').setAttribute('style', 'background-color:green min-width: 2em; width: ' + atm * 50 + '%');
+            document.getElementById('psi').innerHTML = atm + " atm";
+            $("#pressure").attr("class",'normalno progress-bar');
+        }
+ 
+        if (atm > 1.2) {
+            document.getElementById('pressure').setAttribute('style', 'min-width: 2em; width: ' + atm * 50 + '%');
+            document.getElementById('psi').innerHTML = atm + " atm";
+            $("#pressure").attr("class",'visoko progress-bar');
+        }
+    }
+ 
+    setInterval(setatm,2000);
+ 
+ 
+    function setpulse() {
+        var pulse = getRandomArbitrary(10, 100);
+        pulse = pulse.toPrecision(3);
+ 
+        if (pulse < 50) {
+            document.getElementById('pulse').setAttribute('style', 'min-width: 2em; width: ' + pulse + '%');
+            document.getElementById('pul').innerHTML = pulse + "%";
+            $("#pulse").attr("class",'nisko progress-bar');
+        }
+ 
+        if (pulse >= 50 && pulse <= 80) {
+            document.getElementById('pulse').setAttribute('style', 'background-color:green min-width: 2em; width: ' + pulse + '%');
+            document.getElementById('pul').innerHTML = pulse + "%";
+            $("#pulse").attr("class",'normalno progress-bar');
+        }
+ 
+        if (pulse > 80) {
+            document.getElementById('pulse').setAttribute('style', 'min-width: 2em; width: ' + pulse + '%');
+            document.getElementById('pul').innerHTML = pulse + "%";
+            $("#pulse").attr("class",'visoko progress-bar');
+        }
+    }
+ 
+    setInterval(setpulse,2000);
+ 
+    function setrespiration() {
+        var respiration = getRandomArbitrary(10, 25);
+        respiration = respiration.toPrecision(2);
+        if (respiration < 12) {
+            document.getElementById('respiration').setAttribute('style', 'min-width: 2em; width: ' + respiration * 2 + '%');
+            document.getElementById('res').innerHTML = respiration + " BrPM";
+            $("#respiration").attr("class",'nisko progress-bar');
+        }
+ 
+        if (respiration >= 12 && respiration <= 20) {
+            document.getElementById('respiration').setAttribute('style', 'background-color:green min-width: 2em; width: ' + respiration * 2 + '%');
+            document.getElementById('res').innerHTML = respiration + " BrPM";
+            $("#respiration").attr("class",'normalno progress-bar');
+        }
+ 
+        if (respiration > 20) {
+            document.getElementById('respiration').setAttribute('style', 'min-width: 2em; width: ' + respiration * 2 + '%');
+            document.getElementById('res').innerHTML = respiration + " BrPM";
+            $("#respiration").attr("class",'visoko progress-bar');
+        }
+    }
+ 
+    setInterval(setrespiration,2000);
+ 
+    function setheart() {
+        var heart = getRandomArbitrary(50, 160);
+        if(heart<100)heart = heart.toPrecision(2);
+        if(heart>=100)heart=heart.toPrecision(3);
+        if (heart < 60) {
+            document.getElementById('heart').setAttribute('style', 'min-width: 2em; width: ' + (heart-50)*1.1 + '%');
+            document.getElementById('hea').innerHTML = heart + " BPM";
+            $("#heart").attr("class",'nisko progress-bar');
+        }
+ 
+        if (heart >= 60 && heart <= 100) {
+            document.getElementById('heart').setAttribute('style', 'background-color:green min-width: 2em; width: ' + (heart-50)*1.1 + '%');
+            document.getElementById('hea').innerHTML = heart + " BPM";
+            $("#heart").attr("class",'normalno progress-bar');
+        }
+ 
+        if (heart > 100) {
+            document.getElementById('heart').setAttribute('style', 'min-width: 2em; width: ' + (heart-50)*1.1 + '%');
+            document.getElementById('hea').innerHTML = heart + " BPM";
+            $("#heart").attr("class",'visoko progress-bar');
+        }
+    }
+    setInterval(setheart,2000);
+</script>
+
+</body>
+</html>
