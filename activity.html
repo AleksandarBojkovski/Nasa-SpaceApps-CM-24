@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Harmony</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script
+			  src="https://code.jquery.com/jquery-2.2.3.js"
+			  integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="
+			  crossorigin="anonymous"></script>
+	<style type="text/css">
+	ul{
+		list-style-type: none;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	li{
+		display: inline;
+	}
+
+	body{margin: 0;
+		width: 100%}
+
+	.header{
+		float:left;
+		width: 100%;
+		background: black;
+	}
+	.logo{
+		float:left;
+		width:150px;
+	}
+	.logo_1{
+		width: 80px;
+		padding: 8px;
+	}
+	.navbar{
+		float:right;
+		margin: 12px;
+
+	}
+	.navbar>ul>li>a{
+		padding: 15px;
+		font-family: sans-serif;
+		text-decoration: none;
+		font-weight: bold;
+    	color: #1A5DAD;
+    	border: solid;
+		border-color: black;
+	}
+	.navbar>ul>li>a:hover{
+		background: black;
+		font-family: sans-serif;
+		text-decoration: none;
+		font-weight: bold;
+		border: solid;
+		border-color: #1A5DAD;
+		color: #1A5DAD;
+	}
+	
+	
+	.welcome{
+		background:url(activity.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100%;
+		float: left;
+		font-family: sans-serif;
+		text-align: center;
+		height: 400px;
+		width: 100%
+		
+
+	}
+	.activ{
+		width: 100%;
+		background: black;
+		color: white;
+		height: 100px;
+	}
+	.footer{
+		height:50px;
+		width:100%;
+		float:left;
+		background:#1A5DAD;
+		color: white;
+		font-family: sans-serif;
+		font-size: 10px;
+		text-align: center;
+		border-top: solid;
+		padding-top: 5px;
+		border-color: white;
+	}
+	.forma{
+		background: black;
+		color:white;
+		font-family: sans-serif;
+	    font-size: 1.5em;
+	}
+
+	input[type=submit] {
+    width: 100%;
+    background-color: #1BAA58;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	}
+
+
+
+
+	</style>
+</head>
+
+<body>
+<div id="home" class="header">
+	<div class="logo">
+		<a href="index.html"><img class="logo_1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1237px-NASA_logo.svg.png"></a>
+	</div>
+
+	<div class="navbar"> 
+		<ul>
+			
+			<li><a href="bodyc.html">Body</a></li>
+			<li><a href="environment.html">Environment</a></li>
+			<li><a href="activity.html">Activity</a></li>
+			<li><a href="aid-programs.html">Harmony</a></li>
+			
+		
+		</ul>
+	</div>
+</div>
+	
+<div class="welcome">
+		
+</div>
+
+
+
+
+
+<div class="forma">
+<form>
+		<br>
+		<br>
+		<span>
+            Exercise machine:
+        </span>
+		<select class="form-control">
+            <option value="one">TVIS</option>
+            <option value="two">CEVIS</option>
+            <option value="three">RED</option>
+        </select>
+            <span>
+            Duration:
+            </span>
+        <select class="form-control">
+            <option value="1">1 cycle</option>
+            <option value="2">2 cycle</option>
+            <option value="3">3 cycle</option>
+            <option value="4">4 cycle</option>
+            <option value="5">5 cycle</option>
+            <option value="6">6 cycle</option>
+            <option value="7">7 cycle</option>
+            <option value="8">8 cycle</option>
+            <option value="9">9 cycle</option>
+            <option value="10">10 cycle</option>
+        </select>
+        <span>
+            Water Intake
+            </span>
+        <select class="form-control">
+            <option value="1">0.25l</option>
+            <option value="2">0.5l</option>
+            <option value="3">1l</option>
+                        
+        </select>
+        <span>
+            Calorie Intake
+            </span>
+        <select class="form-control">
+            <option value="1">250 Kcals</option>
+            <option value="2">500 Kcals</option>
+            <option value="3">1000 Kcals</option>
+                        
+        </select>
+        
+        <br>
+  			<input type="submit" value="Submit">
+  		<br>
+</form>
+
+</div>
+<div class="footer">
+	&copy Copyright 2016 NASA. All rights reserved<br>
+	
+</div>
+
+
+
+</body>
+</html>

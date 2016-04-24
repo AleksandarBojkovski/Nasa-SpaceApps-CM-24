@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<title>Environment Conditions</title>
+	<script
+			  src="https://code.jquery.com/jquery-2.2.3.js"
+			  integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="
+			  crossorigin="anonymous"></script>
+
+	<style type="text/css">
+	ul{
+		list-style-type: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+	}
+	li{
+		display: inline;
+	}
+
+	body{margin: 0;
+		width: 100%}
+
+.header{
+        float:left;
+        width: 100%;
+        background: black;
+    }
+    .logo{
+        float:left;
+        width:150px;
+    }
+    .logo_1{
+        width: 80px;
+        padding: 8px;
+    }
+    .navbar{
+        float:right;
+        margin: 12px;
+
+    }
+    .navbar>ul>li>a{
+        padding: 15px;
+        font-family: sans-serif;
+        text-decoration: none;
+        font-weight: bold;
+        color: #1A5DAD;
+        border: solid;
+        border-color: black;
+    }
+    .navbar>ul>li>a:hover{
+        background: black;
+        font-family: sans-serif;
+        text-decoration: none;
+        font-weight: bold;
+        border: solid;
+        border-color: #1A5DAD;
+        color: #1A5DAD;
+    }
+	
+	.welcome{
+		background:url(home.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100%;
+		float: left;
+		font-family: sans-serif;
+		text-align: center;
+		height: 400px;
+		width: 100%
+
+		
+
+	}
+	 table {
+    border-collapse: collapse;
+    width: 100%;
+	}
+
+	th, td {
+    text-align: left;
+    padding: 8px;
+	}
+
+	tr:nth-child(even){background-color: #f2f2f2}
+
+	
+
+	th {
+    background-color: #4CAF50;
+    color: white;
+	}
+
+	.footer{
+		height:50px;
+		width:100%;
+		float:left;
+		background:#1A5DAD;
+		color: white;
+		font-family: sans-serif;
+		font-size: 10px;
+		text-align: center;
+		border-top: solid;
+		padding-top: 5px;
+		border-color: white;
+	}
+	.prikaz{
+		padding: 50px;
+
+		width:100%;
+		float:left;
+		background: black;
+	}
+
+.nisko{
+	background-image: linear-gradient(to bottom,#1a5dad 0,#1A5DAD 100%);
+	
+	
+}
+.normalno{
+	background-image: linear-gradient(to bottom,#1baa58 0,#1BAA58 100%);
+	
+
+}
+.visoko{
+	    background-image: linear-gradient(to bottom,#ee293d 0,#EE293D 100%);
+
+}
+.progtekst{
+	color: white;
+	font-family: sans-serif;
+	font-size: 1.5em;
+	
+	
+}
+.golemo{
+	color: white;
+	font-family: sans-serif;
+	font-size: 5em;
+	
+	float: right;
+}
+
+
+	</style>
+</head>
+
+<body>
+<div id="home" class="header">
+	<div class="logo">
+		<a href="index.html"><img class="logo_1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1237px-NASA_logo.svg.png"></a>
+	</div>
+
+	<div class="navbar"> 
+		<ul>
+			<li><a href="bodyc.html">Body</a></li>
+            <li><a href="environment.html">Environment</a></li>
+            <li><a href="activity.html">Activity</a></li>
+            <li><a href="aid-programs.html">Harmony</a></li>
+			
+		
+		</ul>
+	</div>
+</div>
+	
+<div class="welcome">
+		
+</div>
+
+
+<div class="prikaz">
+ 
+ 
+
+
+<div class="row">
+
+<div class="col-md-7">
+<span class="progtekst">Temperature</span>
+<div class="progress">
+  
+  <div id="temperature" class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="15" aria-valuemax="30" style="min-width: 2em; width: 0%;">
+ </div>  
+  </div>
+</div>
+<div class="col-md-4">
+<span id="temp" class="golemo">0C</span>
+</div>
+</div>
+
+
+<div class="row">
+
+<div class="col-md-7 ">
+<span class="progtekst">Pressure</span>
+<div class="progress">
+  <div id="pressure" class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 0%;">
+    
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<span id="psi" class="golemo">0%</span>
+</div>
+</div>
+
+
+<div class="row">
+
+<div class="col-md-7 ">
+<span class="progtekst">Humidity</span>
+<div class="progress">
+  <div id="humidity" class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 0%;">
+    
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<span id="hum" class="golemo">0%</span>
+</div>
+</div>
+
+<div class="row">
+
+<div class="col-md-7 ">
+<span class="progtekst">Oxygen Levels</span>
+<div class="progress">
+  <div id="o2" class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 0%;">
+    
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<span id="Oxygen" class="golemo">0%</span>
+</div>
+</div>
+
+
+<div class="row">
+
+<div class="col-md-7 ">
+<span class="progtekst">CO2 Levels</span>
+<div class="progress">
+  <div id="co2" class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 0%;">
+    
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<span id="c" class="golemo">0%</span>
+</div>
+</div>
+
+
+
+
+</div>
+ 
+ 
+ 
+<div class="footer">
+    &copy Copyright 2016 NASA. All rights reserved<br>
+   
+</div>
+ 
+<script>
+    function getRandomArbitrary(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+ 
+    function settemp(tmp) {
+ 
+        var temperature = getRandomArbitrary(15, 30);
+        temperature = temperature.toPrecision(4);
+ 
+        if (temperature < 18) {
+            document.getElementById('temperature').setAttribute('style', 'min-width: 2em; width: ' + (temperature - 15) * 6.6 + '%');
+            document.getElementById('temp').innerHTML = temperature + " \xB0C";
+            $("#temperature").attr("class",'nisko progress-bar');
+        }
+ 
+        else if (temperature >= 18 && temperature <= 26) {
+            document.getElementById('temperature').setAttribute('style', 'background-color:green min-width: 2em; width: ' + (temperature - 15) * 6.6 + '%');
+            document.getElementById('temp').innerHTML = temperature + " \xB0C";
+            $("#temperature").attr("class",'normalno progress-bar');
+        }
+ 
+        else if (temperature > 26) {
+            document.getElementById('temperature').setAttribute('style', 'min-width: 2em; width: ' + (temperature - 15) * 6.6 + '%');
+            document.getElementById('temp').innerHTML = temperature + " \xB0C";
+            $("#temperature").attr("class",'visoko progress-bar');
+        }
+ 
+    }
+ 
+    setInterval(settemp,2000);
+ 
+    function setatm() {
+        var atm = getRandomArbitrary(0, 2);
+        if (atm >= 1) {
+            atm = atm.toPrecision(3);
+        }
+        else
+            atm = atm.toPrecision(2);
+ 
+        if (atm < 0.8) {
+            document.getElementById('pressure').setAttribute('style', 'min-width: 2em; width: ' + atm * 50 + '%');
+            document.getElementById('psi').innerHTML = atm + " atm";
+            $("#pressure").attr("class",'nisko progress-bar');
+        }
+ 
+        if (atm >= 0.8 && atm <= 1.2) {
+            document.getElementById('pressure').setAttribute('style', 'background-color:green min-width: 2em; width: ' + atm * 50 + '%');
+            document.getElementById('psi').innerHTML = atm + " atm";
+            $("#pressure").attr("class",'normalno progress-bar');
+        }
+ 
+        if (atm > 1.2) {
+            document.getElementById('pressure').setAttribute('style', 'min-width: 2em; width: ' + atm * 50 + '%');
+            document.getElementById('psi').innerHTML = atm + " atm";
+            $("#pressure").attr("class",'visoko progress-bar');
+        }
+    }
+ 
+    setInterval(setatm,2000);
+ 
+ 
+    function sethumidity() {
+        var humidity = getRandomArbitrary(10, 100);
+        humidity = humidity.toPrecision(4);
+ 
+        if (humidity < 50) {
+            document.getElementById('humidity').setAttribute('style', 'min-width: 2em; width: ' + humidity + '%');
+            document.getElementById('hum').innerHTML = humidity + "%";
+            $("#humidity").attr("class",'nisko progress-bar');
+        }
+ 
+        if (humidity >= 50 && humidity <= 80) {
+            document.getElementById('humidity').setAttribute('style', 'background-color:green min-width: 2em; width: ' + humidity + '%');
+            document.getElementById('hum').innerHTML = humidity + "%";
+            $("#humidity").attr("class",'normalno progress-bar');
+        }
+ 
+        if (humidity > 80) {
+            document.getElementById('humidity').setAttribute('style', 'min-width: 2em; width: ' + humidity + '%');
+            document.getElementById('hum').innerHTML = humidity + "%";
+            $("#humidity").attr("class",'visoko progress-bar');
+        }
+    }
+ 
+    setInterval(sethumidity,2000);
+ 
+    function seto2() {
+        var o2 = getRandomArbitrary(10, 50);
+        o2 = o2.toPrecision(4);
+        if (o2 < 15) {
+            document.getElementById('o2').setAttribute('style', 'min-width: 2em; width: ' + o2 * 2 + '%');
+            document.getElementById('Oxygen').innerHTML = o2 + "%";
+            $("#o2").attr("class",'nisko progress-bar');
+        }
+ 
+        if (o2 >= 15 && o2 <= 25) {
+            document.getElementById('o2').setAttribute('style', 'background-color:green min-width: 2em; width: ' + o2 * 2 + '%');
+            document.getElementById('Oxygen').innerHTML = o2 + "%";
+            $("#o2").attr("class",'normalno progress-bar');
+        }
+ 
+        if (o2 > 25) {
+            document.getElementById('o2').setAttribute('style', 'min-width: 2em; width: ' + o2 * 2 + '%');
+            document.getElementById('Oxygen').innerHTML = o2 + "%";
+            $("#o2").attr("class",'visoko progress-bar');
+        }
+    }
+ 
+    setInterval(seto2,2000);
+ 
+    function setco2() {
+        var co2 = getRandomArbitrary(10, 50);
+        co2 = co2.toPrecision(4);
+        if (co2 < 15) {
+            document.getElementById('co2').setAttribute('style', 'min-width: 2em; width: ' + co2 * 2 + '%');
+            document.getElementById('c').innerHTML = co2 + "%";
+            $("#co2").attr("class",'nisko progress-bar');
+        }
+ 
+        if (co2 >= 15 && co2 <= 25) {
+            document.getElementById('co2').setAttribute('style', 'background-color:green min-width: 2em; width: ' + co2 * 2 + '%');
+            document.getElementById('c').innerHTML = co2 + "%";
+            $("#co2").attr("class",'normalno progress-bar');
+        }
+ 
+        if (co2 > 25) {
+            document.getElementById('co2').setAttribute('style', 'min-width: 2em; width: ' + co2 * 2 + '%');
+            document.getElementById('c').innerHTML = co2 + "%";
+            $("#co2").attr("class",'visoko progress-bar');
+        }
+    }
+    setInterval(setco2,2000);
+</script>
+
+
+</body>
+</html>
